@@ -10,9 +10,16 @@ public class Main {
 
             System.out.println("Enter first name");
             String fName=sc.next();
+            System.out.println("Enter last name");
+            String lName=sc.next();
             String pattern = "^[A-Z][a-zA-Z]{2,}$";
             Pattern compiledPattern = Pattern.compile(pattern);
             Matcher matcher = compiledPattern.matcher(fName);
             System.out.println(matcher.matches());
+            Matcher matcher2 = compiledPattern.matcher(lName);
+            System.out.println(matcher2.matches());
+
+
+
     }
 }
