@@ -55,7 +55,7 @@ public class Main {
                 System.out.println("Enter password minimum 8 characters");
                 sc.nextLine();
                 String password=sc.nextLine();
-                String passwordRegex="^(?=.*[A-Z]).{8}$";
+                String passwordRegex="^(?=.*[A-Z])(?=.*\\\\d).{8,}$";
                 Pattern compiledPassword=Pattern.compile(passwordRegex);
                 Matcher matchPassword=compiledPassword.matcher(password);
                 if(matchPassword.matches())
