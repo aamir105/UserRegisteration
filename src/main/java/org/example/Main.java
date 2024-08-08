@@ -29,15 +29,18 @@ public class Main {
                 }
 
 
-                System.out.print("Enter email address: ");
-                String email = sc.nextLine();
-                String pattern2 = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[-a-zA-Z0-9]{0,61}[a-zA-Z0-9])(?:\\.[a-zA-Z]{2,})?$";
-                Pattern compiledPattern2 = Pattern.compile(pattern2);
-                Matcher matcher3 = compiledPattern2.matcher(email);
-                if (matcher3.matches()) {
-                        System.out.println("Valid email address.");
-                } else {
-                        System.out.println("Invalid email address. Please follow the format: abc.xyz@bl.co.in (optional parts: xyz & in)");
+                System.out.println("Enter the number of emails : ");
+                int n=sc.nextInt();
+                for (int i=0;i<n;i++) {
+                        System.out.println("Enter email-id ");
+                        String email = sc.next();
+                        String pattern2 = "^[a-zA-Z0-9.%+-]+\\.[a-zA-Z0-9.%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}(\\.[a-zA-Z]{2,6})?$";
+                        Pattern compiledPattern2 = Pattern.compile(pattern2);
+                        Matcher matcher3 = compiledPattern2.matcher(email);
+                        if (matcher3.matches())
+                                System.out.println("VALID");
+                        else
+                                System.out.println("INVALID");
                 }
 
                 System.out.println("Enter mobile number with country code, space followed by 10 digit number");
