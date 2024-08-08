@@ -43,7 +43,7 @@ public class Main {
                 System.out.println("Enter mobile number with country code, space followed by 10 digit number");
                 sc.nextLine();
                 String phoneNumber = sc.nextLine();
-                String mobileRegex = "^\\d{2} \\d{10}$";
+                String mobileRegex = "^\\d{2}\\d{10}$";
                 Pattern CompiledMobile = Pattern.compile(mobileRegex);
                 Matcher matcherPhone = CompiledMobile.matcher(phoneNumber);
                 if (matcherPhone.matches())
@@ -51,5 +51,16 @@ public class Main {
                 else
                         System.out.println("INVALID");
 
+
+                System.out.println("Enter password minimum 8 characters");
+                sc.nextLine();
+                String password=sc.nextLine();
+                Pattern compiledPassword=Pattern.compile(password);
+                Matcher matchPassword=compiledPassword.matcher(password);
+                if(matchPassword.matches())
+                        System.out.println("VALID");
+                else
+                        System.out.println("INVALID");
         }
+
 }
