@@ -19,7 +19,7 @@ public class Main {
 //                Pattern compiledPattern = Pattern.compile(pattern);
 //                Matcher matcher2 = compiledPattern.matcher(lName);
                 if(!Pattern.matches(pattern, lName)){
-                        throw new CustomException("Invalid first name. Must start with a capital letter and have at least 3 characters.");
+                        throw new CustomException("Invalid last name.");
                 }
                 return "HAPPY";
 
@@ -29,7 +29,7 @@ public class Main {
 //                Pattern compiledPattern2 = Pattern.compile(pattern2);
 //                Matcher matcher3 = compiledPattern2.matcher(email);
                 if (!Pattern.matches(pattern2,email)){
-                        throw new CustomException("Invalid first name. Must start with a capital letter and have at least 3 characters.");
+                        throw new CustomException("Invalid email.");
                 }
                 return "HAPPY";
 
@@ -39,7 +39,7 @@ public class Main {
                 Pattern CompiledMobile = Pattern.compile(mobileRegex);
                 Matcher matcherPhone =CompiledMobile.matcher(phoneNumber);
                 if(!Pattern.matches(mobileRegex,phoneNumber)) {
-                        throw new CustomException("Invalid first name. Must start with a capital letter and have at least 3 characters.");
+                        throw new CustomException("Invalid Phone Number.");
                 }
                 return "HAPPY";
         }
@@ -48,7 +48,7 @@ public class Main {
 //                Pattern compiledPassword=Pattern.compile(passwordRegex);
 //                Matcher matchPassword=compiledPassword.matcher(password);
                 if(!Pattern.matches(passwordRegex,password)) {
-                        throw new CustomException("Invalid first name. Must start with a capital letter and have at least 3 characters.");
+                        throw new CustomException("Invalid Password.");
                 }
                 return "HAPPY";
         }
